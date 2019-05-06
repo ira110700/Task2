@@ -19,7 +19,7 @@ public class Rle {
     }
 
     public static String rleDecode(String a) {
-        final StringBuilder sb = new StringBuilder();
+        final StringBuilder sc = new StringBuilder();
 
         final char[] chars = a.toCharArray();
 
@@ -36,13 +36,13 @@ public class Rle {
 
             if (repeat > 0) {
                 for (int j = 0; j < repeat; j++) {
-                    sb.append(s.toString());
+                    sc.append(s.toString());
                 }
             } else {
-                sb.append(s.toString());
+                sc.append(s.toString());
             }
         }
-        return sb.toString();
+        return sc.toString();
     }
 }
 
