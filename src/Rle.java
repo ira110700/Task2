@@ -19,17 +19,17 @@ public class Rle {
     }
 
     public static String rleDecode(String a) {
-        final StringBuilder sc = new StringBuilder();
+        StringBuilder sc = new StringBuilder();
 
-        final char[] chars = a.toCharArray();
+        char[] chars = a.toCharArray();
 
         int i = 0;
         while (i < chars.length) {
             int repeat = 0;
             while ((i < chars.length) && Character.isDigit(chars[i])) {
-                repeat = repeat * 10 + chars[i++] - '0';
+                repeat = chars[i++] - '0';
             }
-            final StringBuilder s = new StringBuilder();
+            StringBuilder s = new StringBuilder();
             while ((i < chars.length) && !Character.isDigit(chars[i])) {
                 s.append(chars[i++]);
             }
@@ -45,4 +45,5 @@ public class Rle {
         return sc.toString();
     }
 }
+
 
